@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闕士傑 | 迎向未來，共創學會新局 - 2026 TUA理事長候選人</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #1a365d;
+            --primary-navy-light: #2c4a7c;
+            --accent-teal: #3d8b8b;
+            --accent-teal-light: #5ba3a3;
+            --warm-gold: #c9a227;
+            --warm-cream: #faf8f5;
+            --warm-beige: #f5f0e8;
+            --text-dark: #2d3748;
+            --text-muted: #5a6573;
+            --white: #ffffff;
+            --shadow-soft: 0 4px 20px rgba(26, 54, 93, 0.08);
+            --shadow-medium: 0 8px 30px rgba(26, 54, 93, 0.12);
+            --shadow-card: 0 2px 12px rgba(26, 54, 93, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: var(--warm-cream);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 0.8rem 2rem;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-logo::before {
+            content: '';
+            width: 8px;
+            height: 28px;
+            background: linear-gradient(180deg, var(--accent-teal), var(--primary-navy));
+            border-radius: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-teal);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-teal);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--primary-navy);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--warm-cream) 0%, var(--warm-beige) 50%, #e8e4dc 100%);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(61, 139, 139, 0.03) 100%);
+            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(61, 139, 139, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(26, 54, 93, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--accent-teal);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .hero-badge::before {
+            content: '🏥';
+        }
+
+        .hero-title {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 1.5rem;
+            color: var(--accent-teal);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-navy);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-navy-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-navy);
+            border: 2px solid var(--primary-navy);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-navy);
+            color: var(--white);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInRight 1s ease-out 0.3s both;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            width: 380px;
+            height: 450px;
+        }
+
+        .hero-image-bg {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            background: linear-gradient(135deg, var(--accent-teal), var(--primary-navy));
+            border-radius: 20px;
+            opacity: 0.1;
+        }
+
+        .hero-image-main {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e8e4dc, #d4d0c8);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .hero-floating-card {
+            position: absolute;
+            background: var(--white);
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-medium);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero-floating-card.card-1 {
+            top: 10%;
+            right: -30px;
+            animation-delay: 0s;
+        }
+
+        .hero-floating-card.card-2 {
+            bottom: 15%;
+            left: -40px;
+            animation-delay: 1.5s;
+        }
+
+        .floating-card-title {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .floating-card-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.85rem;
+            color: var(--accent-teal);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        /* About Section */
+        .about {
+            background: var(--white);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 1.8rem;
+            color: var(--primary-navy);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-highlights {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .highlight-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent-teal-light), var(--accent-teal));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .highlight-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--white);
+        }
+
+        .highlight-text h4 {
+            font-size: 1rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.25rem;
+        }
+
+        .highlight-text p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .about-video {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .about-video iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: block;
+        }
+
+        /* Vision Section */
+        .vision {
+            background: linear-gradient(180deg, var(--warm-cream) 0%, var(--warm-beige) 100%);
+        }
+
+        .vision-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .vision-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-card);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vision-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-teal), var(--primary-navy));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .vision-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .vision-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .vision-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--warm-beige), var(--warm-cream));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .vision-number {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 0.9rem;
+            color: var(--accent-teal);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .vision-card h3 {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 1.3rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .vision-card h4 {
+            font-size: 1rem;
+            color: var(--accent-teal);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .vision-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .vision-card ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .vision-card ul li {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            padding-left: 1.2rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        .vision-card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            width: 6px;
+            height: 6px;
+            background: var(--accent-teal);
+            border-radius: 50%;
+        }
+
+        /* Video Section */
+        .video-section {
+            background: var(--warm-beige);
+            padding: 5rem 2rem;
+        }
+
+        .video-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .video-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            background: var(--white);
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: block;
+        }
+
+        .video-source {
+            text-align: center;
+            margin-top: 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Download Section */
+        .download-section {
+            background: var(--warm-cream);
+            padding: 4rem 2rem;
+        }
+
+        .download-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .download-box {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow-card);
+            text-align: center;
+        }
+
+        .download-title {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 1.8rem;
+            color: var(--primary-navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .download-description {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .download-btn-primary {
+            background: var(--primary-navy);
+            color: var(--white);
+        }
+
+        .download-btn-primary:hover {
+            background: var(--primary-navy-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .download-btn-secondary {
+            background: var(--white);
+            color: var(--primary-navy);
+            border: 2px solid var(--primary-navy);
+        }
+
+        .download-btn-secondary:hover {
+            background: var(--primary-navy);
+            color: var(--white);
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Timeline Section */
+        .journey {
+            background: var(--white);
+        }
+
+        .journey-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent-teal), var(--primary-navy));
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: calc(50% + 30px);
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: calc(50% + 30px);
+        }
+
+        .timeline-content {
+            background: var(--warm-cream);
+            padding: 1.5rem;
+            border-radius: 16px;
+            max-width: 350px;
+            position: relative;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: var(--accent-teal);
+            border: 3px solid var(--white);
+            border-radius: 50%;
+            top: 1.5rem;
+            right: -38px;
+            box-shadow: 0 0 0 4px rgba(61, 139, 139, 0.2);
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            left: -38px;
+            right: auto;
+        }
+
+        .timeline-year {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 1.2rem;
+            color: var(--accent-teal);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-navy-light) 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quote-section::before {
+            content: '"';
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            font-size: 20rem;
+            font-family: 'Noto Serif TC', serif;
+            color: rgba(255, 255, 255, 0.05);
+            line-height: 1;
+        }
+
+        .quote-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quote-text {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 1.8rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .quote-author {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--warm-beige);
+            text-align: center;
+        }
+
+        .cta-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+        }
+
+        .cta-description {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-navy);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand h3 {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .footer-links h4 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--warm-gold);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: block;
+            padding: 0.3rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.85rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-image {
+                order: 1;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-image-wrapper {
+                width: 280px;
+                height: 340px;
+            }
+
+            .hero-floating-card.card-1 {
+                right: 0;
+            }
+
+            .hero-floating-card.card-2 {
+                left: 0;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .vision-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                padding-left: 60px;
+                padding-right: 0;
+                justify-content: flex-start;
+            }
+
+            .timeline-dot,
+            .timeline-item:nth-child(even) .timeline-dot {
+                left: 12px;
+                right: auto;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .quote-text {
+                font-size: 1.4rem;
+            }
+
+            .about-highlights {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            padding: 1rem;
+            box-shadow: var(--shadow-medium);
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 1rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-bottom: 1px solid var(--warm-beige);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">闕士傑</a>
+            <ul class="nav-links">
+                <li><a href="#about">關於士傑</a></li>
+                <li><a href="#vision">六大願景</a></li>
+                <li><a href="#video">參選影片</a></li>
+                <li><a href="#journey">經歷</a></li>
+                <li><a href="#download">下載專區</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" onclick="toggleMenu()">關於士傑</a>
+        <a href="#vision" onclick="toggleMenu()">六大願景</a>
+        <a href="#video" onclick="toggleMenu()">參選影片</a>
+        <a href="#journey" onclick="toggleMenu()">經歷</a>
+        <a href="#download" onclick="toggleMenu()">下載專區</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-pattern"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">2026 TUA 理事長候選人</div>
+                <h1 class="hero-title">闕士傑</h1>
+                <p class="hero-subtitle">迎向未來，共創學會新局</p>
+                <p class="hero-description">
+                    以服務的初心，整合資源、團結力量，為台灣泌尿科醫學會帶來創新與精進。
+                    六大願景承諾，從會員需求出發，打造更智慧、更緊密、更強大的泌尿科社群。
+                </p>
+                <div class="hero-cta">
+                    <a href="#vision" class="btn btn-primary">認識六大願景</a>
+                    <a href="#about" class="btn btn-secondary">了解更多</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-bg"></div>
+                    <div class="hero-image-main">
+                        <img src="New_attachment/闕士傑_Photo2.jpg" alt="闕士傑教授">
+                    </div>
+                    <div class="hero-floating-card card-1">
+                        <div class="floating-card-title">服務經歷</div>
+                        <div class="floating-card-value">35+ 年</div>
+                    </div>
+                    <div class="hero-floating-card card-2">
+                        <div class="floating-card-title">現任</div>
+                        <div class="floating-card-value">臺大泌尿部主任</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="section-header">
+                <span class="section-label">About</span>
+                <h2 class="section-title">關於闘士傑</h2>
+                <p class="section-description">誠信、認真、可溝通，不逃避問題</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>以服務回饋，為社群付出</h3>
+                    <p>
+                        愛因斯坦曾說：「我每日百次提醒自己，我的生活仰賴他人之勞動，應當以同樣的付出來回報。」這句話一直提醒士傑，過去的每一步進展都來自師長指導、同仁支持與朋友幫忙。
+                    </p>
+                    <p>
+                        自 1989 年進入台大泌尿科學習，後至美國休士頓學習腎移植，回台後推動腹腔鏡與微創手術。2009 至 2021 年間在美國 Cleveland Clinic 擔任主治醫師與臨床教授，深刻了解台灣和美國的醫療差異及困境，更能從國際宏觀看見台灣要被重視，就須在國際場合發聲與出席。
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                                </svg>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>教學傳承</h4>
+                                <p>建立機器手臂訓練體系，鼓勵年輕醫師挑戰自己</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                                </svg>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>國際連結</h4>
+                                <p>擔任 TUA 國際事務主委，協助學會在國際發聲</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>技術創新</h4>
+                                <p>推動跨院合作、引進新技術、拓展醫療服務</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">
+                                <svg fill="none" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                                </svg>
+                            </div>
+                            <div class="highlight-text">
+                                <h4>團隊合作</h4>
+                                <p>願意傾聽、願意修正、能同心付出的服務團隊</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-video">
+                    <iframe 
+                        width="560" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/GCxhVWoGGAw" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision" id="vision">
+        <div class="vision-container">
+            <div class="section-header">
+                <span class="section-label">Vision</span>
+                <h2 class="section-title">六大願景承諾</h2>
+                <p class="section-description">從個人效率到專業精進，從基層守護到國際連結，這是一個環環相扣的完整藍圖</p>
+            </div>
+            <div class="vision-grid">
+                <!-- Vision 1 -->
+                <div class="vision-card fade-in">
+                    <div class="vision-icon">📚</div>
+                    <span class="vision-number">政見 ①</span>
+                    <h3>新知傳遞</h3>
+                    <h4>AI 秒讀，資訊秒到</h4>
+                    <p>重要知識，一眼看懂；重要訊息，一秒送達</p>
+                    <ul>
+                        <li>多媒體總匯 (UroHub App + ESchool 3.0)</li>
+                        <li>會議重點速報 (Uro-Minutes)</li>
+                        <li>有效多元溝通 (App、Line@、Email 同步)</li>
+                    </ul>
+                </div>
+
+                <!-- Vision 2 -->
+                <div class="vision-card fade-in">
+                    <div class="vision-icon">📱</div>
+                    <span class="vision-number">政見 ②</span>
+                    <h3>服務升級</h3>
+                    <h4>會務整合，一指掌握</h4>
+                    <p>數位賦能，一機搞定；智慧會務，全盤掌握</p>
+                    <ul>
+                        <li>個人化儀表板：積分/行程/快訊總覽</li>
+                        <li>一鍵完成任務：登入、投票、繳費</li>
+                        <li>智慧化服務：AI 客服、參與式提案</li>
+                    </ul>
+                </div>
+
+                <!-- Vision 3 -->
+                <div class="vision-card fade-in">
+                    <div class="vision-icon">🔬</div>
+                    <span class="vision-number">政見 ③</span>
+                    <h3>手術精進</h3>
+                    <h4>師資媒合，專業升級</h4>
+                    <p>大體模擬、新式手術；名師互動，安心學習</p>
+                    <ul>
+                        <li>建立手術師資網 (Surgical Faculty Network)</li>
+                        <li>導入非即時互動指導</li>
+                        <li>常態化大體模擬手術訓練</li>
+                    </ul>
+                </div>
+
+                <!-- Vision 4 -->
+                <div class="vision-card fade-in">
+                    <div class="vision-icon">🛡️</div>
+                    <span class="vision-number">政見 ④</span>
+                    <h3>守護基層</h3>
+                    <h4>爭取權益，技術交流</h4>
+                    <p>泌專優先，權益護航，巡迴衛教，專業互通</p>
+                    <ul>
+                        <li>捍衛基層專業與權益</li>
+                        <li>爭取健保給付</li>
+                        <li>打造新型治療交流網</li>
+                    </ul>
+                </div>
+
+                <!-- Vision 5 -->
+                <div class="vision-card fade-in">
+                    <div class="vision-icon">🌏</div>
+                    <span class="vision-number">政見 ⑤</span>
+                    <h3>國際深耕</h3>
+                    <h4>全球合作、成果共享</h4>
+                    <p>大師巡迴，深化互動，合作平台，成果回饋</p>
+                    <ul>
+                        <li>國際大師巡迴演講</li>
+                        <li>深耕國際學會合作 (EAU、AUA、SIU)</li>
+                        <li>建立國際交流共享平台</li>
+                    </ul>
+                </div>
+
+                <!-- Vision 6 -->
+                <div class="vision-card fade-in">
+                    <div class="vision-icon">🧠</div>
+                    <span class="vision-number">政見 ⑥</span>
+                    <h3>全台智庫</h3>
+                    <h4>互動平台、All-U-Care</h4>
+                    <p>互動分享，疑難有解，案例交流，罕見有光</p>
+                    <ul>
+                        <li>U-CONSULT 難症雲端平台</li>
+                        <li>U-Women：婦女泌尿與復健照護</li>
+                        <li>U-Kids：小兒泌尿跨科專家團隊</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="quote-container">
+            <p class="quote-text">
+                「在瞬息萬變的醫學領域，學會不僅是後盾，更應是每一位會員的『賦能平台』。我的政見，始於您的需求，致力於打造一個更智慧、更緊密、更強大的泌尿科社群。」
+            </p>
+            <p class="quote-author">—— 闕士傑</p>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section" id="video">
+        <div class="video-container">
+            <div class="section-header">
+                <span class="section-label">Video</span>
+                <h2 class="section-title">參選影片</h2>
+                <p class="section-description">透過影片，更深入了解士傑的理念與願景</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/gsriAzBfoeo" 
+                    title="闕士傑教授 - 六大願景說明"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="video-source">影片來源：YouTube</p>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download-section" id="download">
+        <div class="download-container">
+            <div class="download-box">
+                <h2 class="download-title">下載完整文件</h2>
+                <p class="download-description">隨信附上六大願景圖卡，歡迎下載詳閱</p>
+                <div class="download-buttons">
+                    <a href="TUA_2026_闕士傑六大願景政見_V1_1.pdf" class="download-btn download-btn-primary" download>
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        下載政見圖卡 (第一頁)
+                    </a>
+                    <a href="闕士傑的中秋祝賀_及參選理念說明_V0_7_10_03_2025.pdf" class="download-btn download-btn-secondary" download>
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        下載政見圖卡 (第二頁)
+                    </a>
+                    <a href="專業升級_智慧學會_圖形版_V0_2.pdf" class="download-btn download-btn-secondary" download>
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        下載政見圖卡 (第三頁)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="journey" id="journey">
+        <div class="journey-container">
+            <div class="section-header">
+                <span class="section-label">Journey</span>
+                <h2 class="section-title">專業歷程</h2>
+                <p class="section-description">從台大出發，放眼國際，回饋台灣</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-year">1989</span>
+                        <h4>進入台大泌尿科</h4>
+                        <p>開啟泌尿科專業學習之路</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-year">美國進修</span>
+                        <h4>休士頓腎移植訓練</h4>
+                        <p>赴美學習先進腎移植技術</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-year">回台發展</span>
+                        <h4>推動微創手術</h4>
+                        <p>引進腹腔鏡與微創手術技術</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-year">2009-2021</span>
+                        <h4>Cleveland Clinic</h4>
+                        <p>擔任主治醫師與臨床教授，累積國際視野</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <span class="timeline-year">近年</span>
+                        <h4>臺大醫院泌尿部主任</h4>
+                        <p>投入教學傳承、推動跨院合作、擔任 TUA 國際事務主委</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="cta-container">
+            <h2 class="cta-title">一起為 TUA 創造新局</h2>
+            <p class="cta-description">
+                新春將至，萬象更新。懇請各位前輩與同道，給予士傑鞭策指正，讓我們一起為台灣泌尿科醫學會不斷創新與精進。
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#vision" class="btn btn-primary">了解六大願景</a>
+                <a href="#about" class="btn btn-secondary">觀看理念影片</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>闕士傑</h3>
+                    <p>
+                        迎向未來，共創學會新局<br>
+                        2026 台灣泌尿科醫學會理事長候選人<br><br>
+                        臺大醫院泌尿部主任<br>
+                        TUA 國際事務主委
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速連結</h4>
+                    <ul>
+                        <li><a href="#about">關於士傑</a></li>
+                        <li><a href="#vision">六大願景</a></li>
+                        <li><a href="#video">參選影片</a></li>
+                        <li><a href="#journey">專業歷程</a></li>
+                        <li><a href="#download">下載專區</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>六大政見</h4>
+                    <ul>
+                        <li><a href="#vision">新知傳遞</a></li>
+                        <li><a href="#vision">服務升級</a></li>
+                        <li><a href="#vision">手術精進</a></li>
+                        <li><a href="#vision">守護基層</a></li>
+                        <li><a href="#vision">國際深耕</a></li>
+                        <li><a href="#vision">全台智庫</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 闘士傑競選團隊 | 懇請支持</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 4px 20px rgba(26, 54, 93, 0.12)';
+            } else {
+                nav.style.background = 'rgba(255, 255, 255, 0.95)';
+                nav.style.boxShadow = '0 4px 20px rgba(26, 54, 93, 0.08)';
+            }
+        });
+    </script>
+</body>
+</html>
